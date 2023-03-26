@@ -1,6 +1,6 @@
 package org.example;
 
-public class User {
+class User {
     String username;
     String password;
     public int id;
@@ -24,8 +24,12 @@ public class User {
         System.out.println("Перевод успешно выполнен");
     }
 
+    public void deleteAccount() {
+        Bank.users.remove(this);
+        balance = 0.0;
+    }
+
     public void setBalance (double balance) {
         this.balance = balance;
     }
 }
-
